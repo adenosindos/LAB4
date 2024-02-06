@@ -1,7 +1,24 @@
 ---
-- hosts: nodes
-  #become: yes
+- name: Install Flask
+  hosts: nodes
+  become: yes
+
   tasks:
-    - name: install python
+    - name: Update apt package cache (for Ubuntu/Debian)
       apt:
-        name: python3 python3-pip
+        update_cache: yes
+        
+    - name: Install Python and pip
+      apt:
+        name: python3
+        state: present
+        
+    - name: Install pip
+      apt: 
+        name: python3-pip
+        state: present
+
+    - name: Install Flask
+      pip:
+        name: flask
+        state: present
