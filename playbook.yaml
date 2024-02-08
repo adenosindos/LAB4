@@ -1,6 +1,6 @@
 ---
 - name: Test Ping Connectivity
-  hosts: your_target_servers
+  hosts: linux
   gather_facts: false
 
   tasks:
