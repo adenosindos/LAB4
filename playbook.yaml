@@ -1,7 +1,7 @@
 ---
 - name: Test Ping Connectivity
   hosts: linux
-  gather_facts: false
+  gather_facts: true
 
   tasks:
     - name: Test Ping
