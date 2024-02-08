@@ -3,6 +3,11 @@
 10.0.2.83
 
 [linux:vars]
-ansible_user=ubuntu ansible_connection=ssh ansible_ssh_private_key_file=home/ubuntu/renzo-ssh.pem
-ansible_user=ubuntu ansible_connection=ssh ansible_ssh_private_key_file=home/ubuntu/renzo-ssh.pem
+ansible_user=ubuntu
+ansible_connection=ssh 
+ansible_ssh_private_key_file=home/ubuntu/renzo-ssh
+
+ansible_user=ubuntu
+ansible_connection=ssh 
+ansible_ssh_private_key_file=home/ubuntu/renzo-ssh
 
