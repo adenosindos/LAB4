@@ -10,17 +10,22 @@
 ---
 - name: Install Programs on Ubuntu
   hosts: linux
+  become: yes
 
   tasks:
     - name: Update apt cache
       apt:
         update_cache: yes
 
-    - name: Install required packages
+    - name: Install python with sudo
       apt:
         name:
           - software-properties-common
           - python3
+
+    - name: Install pip
+      apt:
+        name:
           - python3-pip
         state: present
 
@@ -36,4 +41,5 @@
       apt:
         name: figlet
         state: present
+
 
