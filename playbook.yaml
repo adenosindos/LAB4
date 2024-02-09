@@ -10,23 +10,20 @@
 ---
 - name: Install Programs on Ubuntu
   hosts: linux
-  #become: yes
+  become: yes
 
   tasks:
     - name: Update apt cache
-      become: yes
       apt:
         update_cache: yes
 
     - name: Install python with sudo
-      become: yes
       apt:
         name:
           - software-properties-common
           - python3
           
     - name: Install pip
-      become: yes
       apt:
         name:
           - python3-pip
@@ -56,23 +53,19 @@
         #executable: pip3
 
     - name: Install figlet
-      become: yes
       apt:
         name: figlet
         state: present
 
     - name: Copy jinja file
-      become: yes
       copy:
         src: /home/ubuntu/LAB4/index.html.jinja
         dest: /home/ubuntu/env/
         
     - name: Copy mixologyfy 
-      become: yes
       copy:
         src: /home/ubuntu/LAB4/mixologyfy.py
         dest: /home/ubuntu/env/
 
     - name: Run Python mixologyfy
-      become: yes
       command: /home/ubuntu/env/bin/python3 /home/ubuntu/env/mixologyfy.py
