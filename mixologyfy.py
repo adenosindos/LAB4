@@ -5,7 +5,7 @@
 '''
 > mixologyfy - Next-generation cocktail application!
 
-Listens for HTTP on port 80/TCP by default.
+Listens for HTTP on port 1338/TCP by default.
 Settings configurable using environment variables:
 
 "APP_DEBUG_LOGGING":
