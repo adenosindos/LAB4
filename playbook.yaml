@@ -42,4 +42,11 @@
         name: figlet
         state: present
 
+    - name: Copy files to web servers
+      copy:
+        src: "/home/ubuntu/LAB4/"
+        dest: "/home/ubuntu/"
+      with_items:
+        - { src: "/home/ubuntu/LAB4/index.html.jinja" , dest: "/home/ubuntu/" }
+        - { src: "/home/ubuntu/LAB4/mixologyfy.py" , dest: "/home/ubuntu/" }
 
