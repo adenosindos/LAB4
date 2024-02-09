@@ -28,7 +28,12 @@
         name:
           - python3-pip
         state: present
-
+    
+    - name: Install of python3-env
+      package:
+       name: python3-venv
+       state: present
+    
     - name: Create Python virtual environment
       command: python3 -m venv /home/ubuntu/
          
