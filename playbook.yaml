@@ -38,7 +38,7 @@
       command: python3 -m venv /home/ubuntu/
          
     - name: Activate virtual environment
-      command: source /home/ubuntu/bin/activate
+      command: /home/ubuntu/bin/activate
         
     - name: Install additional Python packages
       pip:
