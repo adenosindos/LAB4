@@ -22,13 +22,19 @@
         name:
           - software-properties-common
           - python3
-
+          
     - name: Install pip
       apt:
         name:
           - python3-pip
         state: present
 
+    - name: Virtial enviroment
+      ansible.builtin.virtualenv:
+         dest: /home/ubuntu/virtualenv
+    - name: Activate virtual environment
+      command: source /home/ubuntu/virtualenv/bin/activate
+        
     - name: Install additional Python packages
       pip:
         name:
