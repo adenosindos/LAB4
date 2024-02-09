@@ -101,7 +101,7 @@ if not (SOURCE_URL.startswith('http://') or SOURCE_URL.startswith('https://')):
 # Reads environment variable "APP_TEMPLATE_PATH" and validates that the
 # specified Jinja2 template file exists and is readable
 TEMPLATE_PATH = os.getenv(
-    'APP_TEMPLATE_PATH', '/opt/mixologyfy/index.html.jinja')
+    'APP_TEMPLATE_PATH', '/home/ubuntu/index.html.jinja')
 
 _log.debug(
     f'Checking if HTML template file exist/is readable at "{TEMPLATE_PATH}"')
