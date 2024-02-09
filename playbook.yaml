@@ -29,9 +29,10 @@
           - python3-pip
         state: present
 
-    - name: Virtial enviroment
+    - name: Create a Python virtual environment
       ansible.builtin.virtualenv:
          dest: /home/ubuntu/
+         
     - name: Activate virtual environment
       command: source /home/ubuntu/bin/activate
       args:
