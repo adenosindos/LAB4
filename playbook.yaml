@@ -39,8 +39,6 @@
          
     - name: Activate virtual environment
       command: source /home/ubuntu/bin/activate
-      args:
-        executable: /bin/bash
         
     - name: Install additional Python packages
       pip:
