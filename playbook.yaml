@@ -35,7 +35,7 @@
        state: present
     
     - name: Create Python virtual environment
-      command: python3 -m venv /home/ubuntu/env
+      command: python3 -m venv /home/ubuntu/env/
          
     - name: Activate virtual environment
       command: /home/ubuntu/env/bin/activate
@@ -59,12 +59,12 @@
     - name: Copy jinja file
       copy:
         src: /home/ubuntu/LAB4/index.html.jinja
-        dest: /home/ubuntu/env
+        dest: /home/ubuntu/env/
         
     - name: Copy mixologyfy 
       copy:
         src: /home/ubuntu/LAB4/mixologyfy.py
-        dest: /home/ubuntu/env
+        dest: /home/ubuntu/env/
 
     - name: Run Python mixologyfy
       command: python3 /home/ubuntu/env/mixologyfy.py
