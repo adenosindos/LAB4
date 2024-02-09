@@ -30,8 +30,9 @@
         state: present
 
     - name: Create a Python virtual environment
-      ansible.builtin.virtualenv:
-         dest: /home/ubuntu/
+      command:
+      cmd: virtualenv /home/ubuntu -p python3
+      creates: "/home/ubuntu/"
          
     - name: Activate virtual environment
       command: source /home/ubuntu/bin/activate
