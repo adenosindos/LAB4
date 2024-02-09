@@ -31,9 +31,9 @@
 
     - name: Virtial enviroment
       ansible.builtin.virtualenv:
-         dest: /home/ubuntu/virtualenv
+         dest: /home/ubuntu/
     - name: Activate virtual environment
-      command: source /home/ubuntu/virtualenv/bin/activate
+      command: source /home/ubuntu/bin/activate
         
     - name: Install additional Python packages
       pip:
