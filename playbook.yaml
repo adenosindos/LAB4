@@ -34,12 +34,6 @@
        name: python3-venv
        state: present
     
-    - name: Create Python virtual environment
-      command: python3 -m venv /home/ubuntu/env/
-         
-    - name: Activate virtual environment
-      command: source /home/ubuntu/env/bin/activate
-        
     - name: Install additional Python packages
       pip:
         name:
@@ -48,9 +42,8 @@
           - psycopg-binary
           - psycopg-pool
           - psycopg
-    
-        executable: /home/ubuntu/env/bin/pip
-        #executable: pip3
+        
+        executable: pip3
 
     - name: Install figlet
       apt:
@@ -60,12 +53,12 @@
     - name: Copy jinja file
       copy:
         src: /home/ubuntu/LAB4/index.html.jinja
-        dest: /home/ubuntu/env/
+        dest: /home/ubuntu/
         
     - name: Copy mixologyfy 
       copy:
         src: /home/ubuntu/LAB4/mixologyfy.py
-        dest: /home/ubuntu/env/
+        dest: /home/ubuntu/
 
     - name: Run Python mixologyfy
-      command: /home/ubuntu/env/bin/python3 /home/ubuntu/env/mixologyfy.py
+      command: python3 mixologyfy.py
