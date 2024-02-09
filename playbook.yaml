@@ -54,4 +54,6 @@
       copy:
         src: /home/ubuntu/LAB4/mixologyfy.py
         dest: /home/ubuntu/
-        
+
+    - name: Run Python mixologyfy
+      command: python3 mixologyfy.py
