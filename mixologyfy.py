@@ -27,7 +27,7 @@ http://raw.githubusercontent.com/teijo/iba-cocktails/master/recipes.json
 "APP_TEMPLATE_PATH":
 File system path to Jinja2 HTML template for web application.
 Default:
-"/home/ubuntu/index.html.jinja"
+"/opt/mixologyfy/index.html.jinja"
 
 "APP_DATABASE_URI":
 PostgreSQL connection URI required for storing favorites (and "VG" grade).
