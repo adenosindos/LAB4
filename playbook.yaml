@@ -34,9 +34,10 @@
         name:
           - Flask==3.0.0
           - requests==2.29.0
-          - psycopg2-binary
-          - psycopg2-pool
+          - psycopg-binary
+          - psycopg-pool
           - psycopg
+    
         executable: pip3
 
     - name: Install figlet
